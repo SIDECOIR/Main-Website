@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="fonts.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>SideCo</title>
+</head>
+<!-- fonts : mosalas , sade , nafis , ordibehesht_shablon , dirooz , titrbd , lalezar , ordibehesht , badkh , vazir -->
+<!-- main css -->
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .page-container {
+        width: 100vw;
+        height: max-content;
+        background-color: white;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: flex-start;
+        overflow-x: hidden;
+    }
+
+    .title {
+        font-family: badkh;
+        font-size: 2.5rem;
+        color: rgba(51, 65, 85, 1);
+    }
+
+    .go-top{
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
+</style>
+
+<!-- banner section -->
+<style>
+    .banner-section {
+        width: 100%;
+        height: calc(100vh + 5px);
+        background-image: url('./high_speed_train.jpg');
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='560' preserveAspectRatio='none' viewBox='0 0 1440 560'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1330%26quot%3b)' fill='none'%3e%3crect width='1440' height='560' x='0' y='0' fill='%230e2a47'%3e%3c/rect%3e%3cpath d='M132.45 84.97L197.41 122.47L197.41 197.47L132.45 234.97L67.5 197.47L67.5 122.47zM132.45 309.97L197.41 347.47L197.41 422.47L132.45 459.97L67.5 422.47L67.5 347.47zM67.5 422.47L132.45 459.97L132.45 534.97L67.5 572.47L2.55 534.97L2.55 459.97zM132.45 534.97L197.41 572.47L197.41 647.47L132.45 684.97L67.5 647.47L67.5 572.47zM197.41 -27.53L262.36 9.97L262.36 84.97L197.41 122.47L132.45 84.97L132.45 9.97zM262.36 309.97L327.31 347.47L327.31 422.47L262.36 459.97L197.41 422.47L197.41 347.47zM327.31 197.47L392.27 234.97L392.27 309.97L327.31 347.47L262.36 309.97L262.36 234.97zM392.27 309.97L457.22 347.47L457.22 422.47L392.27 459.97L327.31 422.47L327.31 347.47zM392.27 534.97L457.22 572.47L457.22 647.47L392.27 684.97L327.31 647.47L327.31 572.47zM457.22 -27.53L522.18 9.97L522.18 84.97L457.22 122.47L392.27 84.97L392.27 9.97zM522.18 84.97L587.13 122.47L587.13 197.47L522.18 234.97L457.22 197.47L457.22 122.47zM587.13 -27.53L652.08 9.97L652.08 84.97L587.13 122.47L522.18 84.97L522.18 9.97zM652.08 84.97L717.04 122.47L717.04 197.47L652.08 234.97L587.13 197.47L587.13 122.47zM587.13 422.47L652.08 459.97L652.08 534.97L587.13 572.47L522.18 534.97L522.18 459.97zM717.04 -27.53L781.99 9.97L781.99 84.97L717.04 122.47L652.08 84.97L652.08 9.97zM781.99 534.97L846.95 572.47L846.95 647.47L781.99 684.97L717.04 647.47L717.04 572.47zM846.94 -27.53L911.9 9.97L911.9 84.97L846.94 122.47L781.99 84.97L781.99 9.97zM911.9 84.97L976.85 122.47L976.85 197.47L911.9 234.97L846.94 197.47L846.94 122.47zM911.9 309.97L976.85 347.47L976.85 422.47L911.9 459.97L846.94 422.47L846.94 347.47zM1041.81 309.97L1106.76 347.47L1106.76 422.47L1041.81 459.97L976.85 422.47L976.85 347.47zM1041.81 534.97L1106.76 572.47L1106.76 647.47L1041.81 684.97L976.85 647.47L976.85 572.47zM1106.76 197.47L1171.71 234.97L1171.71 309.97L1106.76 347.47L1041.81 309.97L1041.81 234.97zM1171.71 309.97L1236.67 347.47L1236.67 422.47L1171.71 459.97L1106.76 422.47L1106.76 347.47zM1106.76 422.47L1171.71 459.97L1171.71 534.97L1106.76 572.47L1041.81 534.97L1041.81 459.97zM1171.71 534.97L1236.67 572.47L1236.67 647.47L1171.71 684.97L1106.76 647.47L1106.76 572.47zM1301.62 309.97L1366.57 347.47L1366.57 422.47L1301.62 459.97L1236.67 422.47L1236.67 347.47zM1366.58 -27.53L1431.53 9.97L1431.53 84.97L1366.58 122.47L1301.62 84.97L1301.62 9.97zM1431.53 84.97L1496.48 122.47L1496.48 197.47L1431.53 234.97L1366.58 197.47L1366.58 122.47zM1431.53 309.97L1496.48 347.47L1496.48 422.47L1431.53 459.97L1366.58 422.47L1366.58 347.47zM1366.58 422.47L1431.53 459.97L1431.53 534.97L1366.58 572.47L1301.62 534.97L1301.62 459.97zM1431.53 534.97L1496.48 572.47L1496.48 647.47L1431.53 684.97L1366.58 647.47L1366.58 572.47zM1496.48 -27.53L1561.44 9.97L1561.44 84.97L1496.48 122.47L1431.53 84.97L1431.53 9.97zM1561.44 309.97L1626.39 347.47L1626.39 422.47L1561.44 459.97L1496.48 422.47L1496.48 347.47zM1496.48 422.47L1561.44 459.97L1561.44 534.97L1496.48 572.47L1431.53 534.97L1431.53 459.97zM1561.44 534.97L1626.39 572.47L1626.39 647.47L1561.44 684.97L1496.48 647.47L1496.48 572.47z' stroke='%2303305d' stroke-width='2'%3e%3c/path%3e%3cpath d='M124.95 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM189.91 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM189.91 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM124.95 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM60 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM60 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM124.95 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM189.91 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM189.91 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM124.95 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM60 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM60 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM124.95 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM60 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-4.95 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM-4.95 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM189.91 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM189.91 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM124.95 684.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM60 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM189.91 -27.53 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM254.86 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM254.86 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM124.95 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM254.86 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM319.81 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM319.81 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM254.86 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM319.81 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM384.77 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM384.77 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM254.86 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM449.72 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM449.72 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM384.77 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM384.77 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM449.72 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM449.72 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM384.77 684.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM319.81 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM319.81 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM449.72 -27.53 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM514.68 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM514.68 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM449.72 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM384.77 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM384.77 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM579.63 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM579.63 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM514.68 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM449.72 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM579.63 -27.53 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM644.58 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM644.58 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM709.54 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM709.54 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM644.58 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM579.63 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM644.58 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM644.58 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM579.63 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM514.68 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM514.68 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM709.54 -27.53 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM774.49 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM774.49 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM774.49 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM839.45 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM839.45 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM774.49 684.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM709.54 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM709.54 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM839.44 -27.53 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM904.4 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM904.4 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM839.44 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM969.35 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM969.35 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM904.4 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM839.44 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM904.4 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM969.35 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM969.35 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM904.4 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM839.44 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM839.44 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1034.31 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1099.26 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1099.26 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1034.31 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1034.31 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1099.26 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1099.26 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1034.31 684.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM969.35 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM969.35 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1099.26 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1164.21 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1164.21 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1034.31 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1229.17 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1229.17 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1164.21 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1164.21 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1229.17 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1229.17 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1164.21 684.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1294.12 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.07 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.07 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1294.12 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.08 -27.53 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1424.03 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1424.03 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.08 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1294.12 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1294.12 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1488.98 122.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1488.98 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1424.03 234.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.08 197.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1424.03 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1488.98 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1488.98 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1424.03 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.08 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.08 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1424.03 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.08 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1294.12 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1488.98 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1488.98 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1424.03 684.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1359.08 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1488.98 -27.53 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1553.94 9.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1553.94 84.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1553.94 309.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1618.89 347.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1618.89 422.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1553.94 459.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1553.94 534.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1618.89 572.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1618.89 647.47 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0zM1553.94 684.97 a7.5 7.5 0 1 0 15 0 a7.5 7.5 0 1 0 -15 0z' fill='%2303305d'%3e%3c/path%3e%3cpath d='M83.09 493.54L111.67 510.04L111.67 543.04L83.09 559.54L54.51 543.04L54.51 510.04zM140.25 97.54L168.83 114.04L168.83 147.04L140.25 163.54L111.67 147.04L111.67 114.04zM140.25 493.54L168.83 510.04L168.83 543.04L140.25 559.54L111.67 543.04L111.67 510.04zM283.15 345.04L311.73 361.54L311.73 394.54L283.15 411.04L254.57 394.54L254.57 361.54zM254.57 394.54L283.15 411.04L283.15 444.04L254.57 460.54L225.99 444.04L225.99 411.04zM454.62 444.04L483.2 460.54L483.2 493.54L454.62 510.04L426.05 493.54L426.05 460.54zM511.78 147.04L540.36 163.54L540.36 196.54L511.78 213.04L483.2 196.54L483.2 163.54zM511.78 543.04L540.36 559.54L540.36 592.54L511.78 609.04L483.2 592.54L483.2 559.54zM568.94 147.04L597.52 163.54L597.52 196.54L568.94 213.04L540.36 196.54L540.36 163.54zM540.36 295.54L568.94 312.04L568.94 345.04L540.36 361.54L511.78 345.04L511.78 312.04zM654.68 -1.46L683.26 15.04L683.26 48.04L654.68 64.54L626.1 48.04L626.1 15.04zM654.68 97.54L683.26 114.04L683.26 147.04L654.68 163.54L626.1 147.04L626.1 114.04zM769 -1.46L797.58 15.04L797.58 48.04L769 64.54L740.42 48.04L740.42 15.04zM797.58 345.04L826.16 361.54L826.16 394.54L797.58 411.04L769 394.54L769 361.54zM911.9 147.04L940.48 163.54L940.48 196.54L911.9 213.04L883.32 196.54L883.32 163.54zM911.9 543.04L940.48 559.54L940.48 592.54L911.9 609.04L883.32 592.54L883.32 559.54zM1140.54 147.04L1169.12 163.54L1169.12 196.54L1140.54 213.04L1111.96 196.54L1111.96 163.54zM1254.85 48.04L1283.43 64.54L1283.43 97.54L1254.85 114.04L1226.28 97.54L1226.28 64.54zM1283.43 196.54L1312.01 213.04L1312.01 246.04L1283.43 262.54L1254.85 246.04L1254.85 213.04zM1369.17 246.04L1397.75 262.54L1397.75 295.54L1369.17 312.04L1340.59 295.54L1340.59 262.54z' stroke='rgba(6%2c 80%2c 156%2c 0.93)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1330'%3e%3crect width='1440' height='560' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e");
+        background-position: center;
+        background-size: cover;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .banner-text {
+        direction: rtl;
+        text-align: center;
+        width: 100%;
+        font-family: mosalas;
+        font-size: 5rem;
+        color: red;
+        animation: flash;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .banner-desc {
+        margin-top: 25px;
+        direction: rtl;
+        text-align: center;
+        width: 100%;
+        font-family: badkh;
+        font-size: 3rem;
+        color: rgb(194, 194, 194);
+        animation: tada;
+        animation-duration: 1s;
+        animation-iteration-count: 2;
+        animation-delay: 3s;
+    }
+
+    .slide-down {
+        position: absolute;
+        bottom: 0;
+    }
+</style>
+
+<!-- skills section -->
+<style>
+    .skills-section {
+        background-color: #f3f4f6;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: end;
+        width: 100%;
+        height: max-content;
+        z-index: 2;
+        box-shadow: 0px -5px 5px white;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    .skills-title{
+        margin-right: 20px;
+    }
+
+    .skills-container {
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+        padding: 50px 10vw;
+    }
+
+    .skills-item {
+        width: 200px;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: start;
+        align-items: center;
+    }
+
+    .skills-item-img {
+        width: 150px;
+        height: 150px;
+        clip-path: circle();
+    }
+
+    .skills-item-title {
+        font-size: 1.5rem;
+        direction: rtl;
+        font-family: lalezar;
+    }
+
+    .skills-item-desc {
+        font-size: 0.9rem;
+        direction: rtl;
+        text-align: center;
+        font-family: vazir;
+    }
+</style>
+
+<!-- features section -->
+<style>
+    .features-section {
+        background-color: #f3f4f6;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+        padding: 20px;
+    }
+
+    .features-container {
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+    .features-item {
+        display: flex;
+        flex-flow: row-reverse nowrap;
+        width: 70%;
+        height: max-content;
+        background-color: blueviolet;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .features-item:nth-child(odd) {
+        align-self: flex-end;
+    }
+
+    .features-item-img {
+        border-left: 3px dashed white;
+        padding: 5px 10px;
+    }
+
+    .features-item-info {
+        width: 100%;
+        height: max-content;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-end;
+        align-items: flex-end;
+        padding: 20px 25px;
+    }
+
+    .features-item-title {
+        font-size: 2rem;
+        font-family: mosalas;
+        color: #ffffff;
+        align-self: center;
+        margin-bottom: 10px;
+    }
+
+    .features-item-desc {
+        font-family: vazir;
+        font-size: 1.2rem;
+        direction: rtl;
+    }
+</style>
+
+<!-- about-section -->
+<style>
+    .about-section{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+    }
+    .about-text{
+        width: 80%;
+        text-align: center;
+        background-color: rgba(111, 168, 240, 0.3);
+        border-radius: 10px;
+        padding: 40px 20px;
+        font-family: vazir;
+        font-size: 1rem;
+        direction: rtl;
+        line-height: 250%;
+    }
+</style>
+
+<!-- contact-section -->
+<style>
+    .contact-section{
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        height: max-content;
+        margin-top: 20px;
+        background-color: #0700f9;
+        padding: 20px;
+        color: white;
+        margin-top: 50px;
+    }
+
+    .contact-title{
+        color: white;
+        font-size: 3rem;
+    }
+
+    .contact-desc{
+        direction: rtl;
+    }
+
+    .contact-container{
+        display: flex;
+        flex-flow: row-reverse wrap;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        height: max-content;
+        margin: 20px 0px;
+        color: white;
+        border-radius: 15px;
+        padding: 20px;
+    }
+
+    .form{
+        background-color: rgba(255, 255, 255, 0);
+        border-radius: 5px;
+        padding: 10px;
+        direction: rtl;
+        font-family: vazir;
+        width: 50%;
+    }
+
+    .form>label , .form>button[type=submit]{
+        margin-top: 15px;
+    }
+
+
+    input[type=text]{
+        direction: ltr;
+    }
+
+    input:placeholder-shown{
+        direction: ltr;
+        text-align: left;
+    }
+
+    .contact-info{
+        direction: rtl;
+    }
+
+    
+</style>
+
+<body class="page-container">
+    <header id="top"></header>
+    <a href="#top" class="go-top"></a>
+    <article>
+        <section class="banner-section">
+            <p class="banner-text">محدودیت ها برداشته شد!</p>
+            <p class="banner-desc">با ما بدون <b>محدودیت</b> طراحی کنید!</p>
+            <lottie-player loading="lazy" class="slide-down" src="https://assets1.lottiefiles.com/packages/lf20_keaztevn.json"
+                background="transparent" speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+        </section>
+        <section class="skills-section">
+            <h2 class="title skills-title">ما در چه زمینه هایی فعالیت داریم؟</h2>
+            <div class="skills-container">
+                <div class="skills-item">
+                    <lottie-player loading="lazy" class="skills-item-img"
+                        src="https://assets5.lottiefiles.com/packages/lf20_G2nVPR715x.json" background="transparent"
+                        speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                    <div class="skills-item-title">طراحی وب سایت</div>
+                    <div class="skills-item-desc">طراحی و توسعه انواع وبسایت های شرکتی، فروشگاهی، سازمانی و... به صورت کاملا
+                        اختصاصی</div>
+                </div>
+                <div class="skills-item">
+                    <lottie-player loading="lazy" class="skills-item-img"
+                        src="https://assets1.lottiefiles.com/packages/lf20_qfn2fckn.json" background="transparent" speed="1"
+                        style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                    <div class="skills-item-title">طراحی انواع CMS</div>
+                    <div class="skills-item-desc">طراحی انواع سیستم های مدیریت محتوا (CMS) با بهترین سرعت و رابطه کاربری
+                    </div>
+                </div>
+                <div class="skills-item">
+                    <lottie-player loading="lazy" class="skills-item-img"
+                        src="https://assets6.lottiefiles.com/private_files/lf30_euxm03wm.json" background="transparent"
+                        speed="1" style="width: 150px; height: 150px;" loop autoplay></lottie-player>
+                    <div class="skills-item-title">سیستم های سازمانی</div>
+                    <div class="skills-item-desc">طراحی سیستم های سازمانی برای مدیریت کارکنان، اطلاعیه ها، محسابه حقوق و ...
+                    </div>
+                </div>
+                <div class="skills-item">
+                    <lottie-player loading="lazy" class="skills-item-img"
+                        src="https://assets1.lottiefiles.com/private_files/lf30_c1zpudp8.json" background="transparent"
+                        speed="1" style="width: 150px; height: 150px;" loop autoplay>
+                    </lottie-player>
+                    <div class="skills-item-title">طراحی با وردپرس</div>
+                    <div class="skills-item-desc">طراحی انواع وبسایت ها بر پایه سیستم مدیریت محتوا وردپرس با کمترین قیمت و
+                        بهترین کیفیت</div>
+                </div>
+            </div>
+
+        </section>
+        <section class="features-section">
+            <lottie-player loading="lazy" src="https://assets1.lottiefiles.com/packages/lf20_vf7vzf32.json" background="transparent"
+                speed="1" style="width: 50vw; height: auto;" autoplay></lottie-player>
+            <h2 class="title"></h2>
+            <div class="features-container">
+                <div class="features-item">
+                    <lottie-player loading="lazy" class="features-item-img"
+                        src="https://assets9.lottiefiles.com/packages/lf20_rg69wuwj.json" background="transparent" speed="1"
+                        style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+                    <div class="features-item-info">
+                        <h2 class="features-item-title">تضمین کیفیت</h2>
+                        <div class="features-item-desc">در جهت جلب رضایت مشتری و ارتقا سطح کیفیت خدمات ارائه شده، ما از بروزترین تکنولوژی های روز دنیا استفاده میکنیم. همچنین بهترین تبلیغات ما ارائه محصولات با کیفیت و بهینه شده به مشتریان است.
+                        </div>
+                    </div>
+                </div>
+                <div class="features-item">
+                    <lottie-player loading="lazy" class="features-item-img"
+                        src="https://assets9.lottiefiles.com/packages/lf20_cmdfQr.json" background="transparent" speed="1"
+                        style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+                    <div class="features-item-info">
+                        <h2 class="features-item-title">تحویل به موقع</h2>
+                        <div class="features-item-desc">با استفاده از کادر مجرب و حرفه ای، تمام سفارشات و پروژه ها در کمترین زمان ممکن بدون افت کیفیت تحویل مشتریان داده می شود. قبل از سفارش طراحی می توانید با کارشناسان ما تماس گرفته و از شرایط سفارش اطلاع پیدا کنید.</div>
+                    </div>
+                </div>
+                <div class="features-item">
+                    <lottie-player loading="lazy" class="features-item-img"
+                        src="https://assets7.lottiefiles.com/packages/lf20_wvyonoqs.json" background="transparent" speed="1"
+                        style="width: 200px; height: 200px;" loop autoplay></lottie-player>
+                    <div class="features-item-info">
+                        <h2 class="features-item-title">خدمات پس از فروش</h2>
+                        <div class="features-item-desc">پس از تحویل پروژه ارتباط بین شرکت و شما قطع نخواهد شد! در صورتی که مشکلی برای پروژه پیش آمد یا در استفاده از آن به مشکل خوردید تیم پشتیبانی هفت روز هفته 24 ساعته آماده کمک به شما و رفع ابهامات احتمالی است.</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about-section">
+            <h2 class="title">درباره ما</h2>
+            <div class="about-text">
+                ساید یا SIDE ؟ یک شرکت توسعه نرم افزاری در ایران است که در سال <span style="font-weight: bold;">1396</span> در جهت برداشتن محدودیت و مشکلات موجود در طراحی های نرم افزاری و وب سایت ها پا به عرصه گذاشت تا با ارائه راهکار های جدید این مشکلات را حل کند. پس از یکسال فعالیت در این حوضه این شرکت با ایجاد شرکت های زیر مجموعه وارد عرصه های <span style="font-weight: bold;">طراحی وبسایت</span> (sideweb)، <span style="font-weight: bold;">مدیریت سرور</span> و <span style="font-weight: bold;">هوش مصنوعی </span>(sideAI) شد که با تولید وبسایت های جدید موفقیت های بسیاری را کسب نمود.در سال 1399 این شرکت با تجربه کافی در حوضه <span style="font-weight: bold;">سئو </span>و شناخت کافی نسبت به <span style="font-weight: bold;">گوگل </span>و موتور های جستجو پا به عرصه تولید محتوا و راه اندازی فروشگاه های آنلاین گذاشت که نتیجه ترکیب این دو با یکدیگر موفقیت در <span style="font-weight: bold;">فروش فوق العاده </span>مشتریان و صاحبان کسب و کار شد.
+            </div>
+        </section>
+        <section class="contact-section">
+            <h2 class="title contact-title">ارتباط با ما</h2>
+            <p class="contact-desc">جهت دریافت اطلاعات بیشتر و مشاوره رایگان از طریق شماره های زیر با ما در ارتباط باشید.</p>
+            <div class="contact-container">
+                <form class="form" action="" method="post">
+                    <label for="exampleFormControlInput1" class="form-label">ایمیل یا شماره تلفن :</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="09********* mail@mail.com">
+                    <label for="exampleFormControlTextarea1" class="form-label">توضیحات :</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <button type="submit" class="btn btn-secondary">ارسال</button>
+                </form>
+                <div class="contact-info">
+                    <p>شماره تماس: 09961354785</p>
+                    <p>تلگرام: 09961354785</p>
+                    <p>واتساپ: 09906715966</p>
+                    <p>دیگر شبکه های اجتماعی: 09961354785</p>
+                </div>
+            </div>
+        </section>
+    </article>
+    <footer></footer>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</html>

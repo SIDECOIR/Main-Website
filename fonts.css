@@ -1,0 +1,54 @@
+@font-face {
+    font-family: mosalas;
+    src: url(./fonts/A-Mosalas/A-Mosalas.ttf);
+}
+
+@font-face {
+    font-family: sade;
+    src: url(./fonts/A-Sade/A-Sade.ttf);
+}
+
+@font-face {
+    font-family: nafis;
+    src: url(./fonts/ANafis/ANafis.ttf);
+}
+
+@font-face {
+    font-family: ordibehesht_shablon;
+    src: url(./fonts/AOrdibeheshtShablon/A\ Ordibehesht\ shablon.TTF);
+}
+
+@font-face {
+    font-family: armita;
+    src: url(./fonts/A-Armita-Black/A\ Armita\ Black.ttf);
+}
+
+@font-face {
+    font-family: dirooz;
+    src: url(./fonts/Dirooz.ttf);
+}
+
+@font-face {
+    font-family: titrbd;
+    src: url(./fonts/Far_TitrBd/Far_TitrBd.ttf);
+}
+
+@font-face {
+    font-family: lalezar;
+    src: url(./fonts/Lalezar-Font/TTF/Lalezar-Regular.ttf);
+}
+
+@font-face {
+    font-family: ordibehesht;
+    src: url(./fonts/Ordibehesht/Ordibehesht.TTF);
+}
+
+@font-face {
+    font-family: badkh;
+    src: url(./fonts/persian-badkhat2/persian-badkh@t2.ttf);
+}
+
+@font-face {
+    font-family: vazir;
+    src: url(./fonts/vazir-font-v16.1.0/Vazir.ttf);
+}
